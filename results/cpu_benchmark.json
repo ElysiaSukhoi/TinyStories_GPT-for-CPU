@@ -1,0 +1,44 @@
+[
+  {
+    "threads": 4,
+    "batch_size": 8,
+    "context_length": 128,
+    "grad_accum": 2,
+    "warmup_steps": 12,
+    "measured_steps": 50,
+    "train_tokens_per_s": 13575.373402976755,
+    "train_seconds": 7.543070599998828,
+    "val_seconds": 0.8783254000009038,
+    "val_tokens": 32768,
+    "val_loss": 6.911771014332771,
+    "peak_memory_mib": 492.19140625
+  },
+  {
+    "threads": 8,
+    "batch_size": 8,
+    "context_length": 128,
+    "grad_accum": 2,
+    "warmup_steps": 12,
+    "measured_steps": 50,
+    "train_tokens_per_s": 13043.190615099189,
+    "train_seconds": 7.850839799999449,
+    "val_seconds": 0.7424956000013481,
+    "val_tokens": 32768,
+    "val_loss": 6.9117710292339325,
+    "peak_memory_mib": 492.64453125
+  },
+  {
+    "threads": 16,
+    "batch_size": 8,
+    "context_length": 128,
+    "grad_accum": 2,
+    "warmup_steps": 12,
+    "measured_steps": 50,
+    "train_tokens_per_s": 10714.931629737343,
+    "train_seconds": 9.556757199999993,
+    "val_seconds": 0.8677097999989201,
+    "val_tokens": 32768,
+    "val_loss": 6.911771059036255,
+    "peak_memory_mib": 498.30078125
+  }
+]

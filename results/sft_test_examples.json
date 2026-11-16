@@ -1,0 +1,42 @@
+[
+  {
+    "test_row": 48,
+    "story_id": "1deab28c684cd945df7b9260cc7872be604841a65bd3aea65e731740e83e4c09",
+    "pretrained": "s, they were very excited. They ran to the park and saw a big, shiny rock. They wanted to climb it, but they couldn't find it. They got scared and ran to the top. They ran to the top of the tree and saw a big tree. The tree was very happy. The tree",
+    "sft": "The festigator was very big and it was a big, red, red, and it was a big, red, red, and it was a big, red, red.",
+    "sft_two_complete_sentences": false,
+    "sft_stopped_at_eos": true
+  },
+  {
+    "test_row": 161,
+    "story_id": "100021f2469d2d38e969bf4c229a20fb96477b1f2c113d2173c88b100ff07f66",
+    "pretrained": ". He was so excited! He ran to the slide and ran to the slide. He was so excited! He ran to the slide and ran to the slide. He was so excited! He ran to the slide and ran to the slide. He was so much fun! He ran and ran to the slide. He",
+    "sft": "He was so excited! He ran over to the slide and started to play.",
+    "sft_two_complete_sentences": true,
+    "sft_stopped_at_eos": true
+  },
+  {
+    "test_row": 241,
+    "story_id": "35adf9e8d12c485627dac75b1166d7e3fba36602bb01aab1235318be5d55e5b7",
+    "pretrained": ". It was a big, and a little bird. It was a big, red bird. It was a little bird. The bird was very happy. It wanted to help the bird. The bird said, \"I want to help you. I want to help you.\" The bird said, \"I want to help",
+    "sft": "One day, the fish decided to go on a walk in the pond. The fish was very happy and the fish was happy.",
+    "sft_two_complete_sentences": true,
+    "sft_stopped_at_eos": true
+  },
+  {
+    "test_row": 274,
+    "story_id": "46d11b702141f1eceb580d9736301bdab5ff358bb080849a87f79f9d8276b3e9",
+    "pretrained": ". He has a big, a big, a big, red ball, and a big, and a big, red ball. He has a big ball and a ball. He has a ball and a ball. He has a ball and a ball. He has a ball and a ball. He has a ball and",
+    "sft": "They make a big, a big, red, and a big, red, and a blue, and a blue, and a blue, and a blue, and a blue, a blue, and a blue, and a blue, a blue, and a blue, a blue, and a blue, and a blue",
+    "sft_two_complete_sentences": false,
+    "sft_stopped_at_eos": false
+  },
+  {
+    "test_row": 335,
+    "story_id": "561e6cbfa0515499dcee55e2c698d7e18eecaba765121e3da2ca1f204b01cf1d",
+    "pretrained": ", he was so excited! He went to the park and saw a big, big, shiny rock. He was so excited! He ran to the top of the rock and started to climb. He was so excited! He ran to the top of the rock and started to climb. He was so excited! He ran",
+    "sft": "He was so excited!",
+    "sft_two_complete_sentences": false,
+    "sft_stopped_at_eos": true
+  }
+]

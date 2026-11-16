@@ -1,0 +1,16 @@
+{
+  "validation_tokens": 323456,
+  "window_length": 128,
+  "random_initialization": {
+    "step": 0,
+    "loss": 8.366107283253703,
+    "ppl": 4298.869169480962,
+    "seconds": 11.235064800001055
+  },
+  "best_checkpoint": {
+    "step": 4000,
+    "loss": 2.9059722161264725,
+    "ppl": 18.283010051632417,
+    "seconds": 10.465564300000551
+  }
+}

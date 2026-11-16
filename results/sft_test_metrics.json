@@ -1,0 +1,35 @@
+{
+  "examples": 400,
+  "decoding": "greedy",
+  "max_new_tokens": 64,
+  "context_length": 128,
+  "sft_epoch": 2,
+  "test_sha256": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d",
+  "pretrain_sha256": "467cb96fd962753605e733321c4a6ff7538cdfddd3fa616f1b6050a0ac96b963",
+  "sft_sha256": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+  "tokenizer_sha256": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+  "pretrained": {
+    "response_cross_entropy": 3.4095714400426584,
+    "response_perplexity": 30.252276566526767,
+    "response_tokens_scored": 10924,
+    "two_sentences": 0,
+    "two_sentence_rate": 0.0,
+    "eos_stops": 52,
+    "eos_rate": 0.13,
+    "two_sentences_and_eos": 0,
+    "two_sentences_and_eos_rate": 0.0,
+    "generation_seconds": 29.975076899999976
+  },
+  "sft": {
+    "response_cross_entropy": 2.5905218352244828,
+    "response_perplexity": 13.336729362796763,
+    "response_tokens_scored": 10924,
+    "two_sentences": 396,
+    "two_sentence_rate": 0.99,
+    "eos_stops": 399,
+    "eos_rate": 0.9975,
+    "two_sentences_and_eos": 396,
+    "two_sentences_and_eos_rate": 0.99,
+    "generation_seconds": 9.920577200000025
+  }
+}

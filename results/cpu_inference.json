@@ -1,0 +1,31 @@
+{
+  "python": "3.12.16",
+  "pytorch": "2.15.0+cpu",
+  "device": "cpu",
+  "threads": 4,
+  "reproduced_data_files": 9,
+  "small_batch_check": "passed",
+  "bundle_sha256": "1bb03efde2fcf42e4f3d0e85e0925b8a7bc88bc13869b9b489784b30a76bea33",
+  "inference": [
+    {
+      "model": "pretrain",
+      "checkpoint_step": 4000,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": " She saw a big, red ball, red ball, and a ball. She wanted to play with it, but she was too scared. She asked her mom to help her. Her mom said, \"I'm sorry, Lily. I should have a toy to help you. I should have it.\" Lily was sad",
+      "new_tokens": 64,
+      "generation_seconds": 0.15992770000002565,
+      "tokens_per_second": 400.1808317132663,
+      "stop_reason": "max_new_tokens"
+    },
+    {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She wanted to make a big boat. She wanted to make the boat out of the boat.",
+      "new_tokens": 21,
+      "generation_seconds": 0.17004739999993035,
+      "tokens_per_second": 123.4949784589979,
+      "stop_reason": "eos"
+    }
+  ]
+}

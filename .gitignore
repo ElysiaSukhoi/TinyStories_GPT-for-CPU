@@ -1,0 +1,10 @@
+/.conda/
+/.conda-pkgs/
+/.pip-cache/
+/.venv/
+__pycache__/
+*.py[cod]
+/data/
+/runs/
+/checkpoints/
+/dist/
