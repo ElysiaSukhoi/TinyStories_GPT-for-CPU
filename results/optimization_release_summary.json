@@ -1,0 +1,167 @@
+{
+  "selection": {
+    "model": "b",
+    "reason": "Lowest test response loss and exact repeat count, strongest aggregate continuity, and less repetition than A in the 60-item review.",
+    "tradeoff": "A advanced more explicit goals in the six applicable cases and decoded faster."
+  },
+  "data": {
+    "version": 2,
+    "repository": "roneneldan/TinyStories",
+    "revision": "6d02f92396f7e3e60c2251070b6e0b168568074b",
+    "vocab_size": 4096,
+    "context_length": 128,
+    "splits": {
+      "pretrain_train": {
+        "stories": 80000,
+        "tokens": 17762182
+      },
+      "pretrain_val": {
+        "stories": 1500,
+        "tokens": 323458
+      },
+      "sft_test": {
+        "stories": 400,
+        "min_tokens": 61,
+        "max_tokens": 128
+      },
+      "sft_val": {
+        "stories": 400,
+        "min_tokens": 57,
+        "max_tokens": 113
+      },
+      "sft_train": {
+        "stories": 8000,
+        "min_tokens": 55,
+        "max_tokens": 128
+      }
+    },
+    "sha256": {
+      "manifest.json": "f1865d5172c4a3b8b861b9e3af860709ea1e42667f599ac74e5d62943302ec50",
+      "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+      "pretrain_train.bin": "62413de092170ed9d292e8a54792a17887fd95d7f511a87298b58cc7150baadd",
+      "pretrain_val.bin": "d4f9da7026cf1b13887cb9cf33e4a9f452fa074ea4f4b41268ab2c6432b23d5e",
+      "pretrain_val.jsonl": "0988f9c60137d3beaa85914e283c612b6565dce901f2c22f1fbbb2e6b439514e",
+      "sft_train.jsonl": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+      "sft_val.jsonl": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a",
+      "sft_test.jsonl": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d"
+    }
+  },
+  "model_config": {
+    "vocab_size": 4096,
+    "context_length": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "d_model": 256
+  },
+  "parameters": 4240896,
+  "pretraining": {
+    "seed": 42,
+    "threads": 4,
+    "learning_rate": 0.0003,
+    "batch_size": 8,
+    "gradient_accumulation": 2,
+    "steps": 12000,
+    "tokens": 24576000,
+    "best_step": 11500,
+    "peak_memory_mib": 596.875,
+    "train_seconds": 3659.7222201000004,
+    "full_validation": {
+      "loss": 2.395138426830894,
+      "ppl": 10.96971645706944,
+      "tokens": 323456,
+      "seconds": 13.680741699999999
+    }
+  },
+  "sft": {
+    "seed": 42,
+    "learning_rate": 0.0001,
+    "threads": 4,
+    "batch_size": 16,
+    "pretrain_step": 11500,
+    "pretrain_sha256": "e09018628b6623a8e8a0d58b95bbef8ec5112ccbdb85c8d66c4d552e55b4f57e",
+    "tokenizer_sha256": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+    "splits_sha256": {
+      "train": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+      "val": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a"
+    },
+    "best_epoch": 1,
+    "history": [
+      {
+        "epoch": 0,
+        "step": 0,
+        "val_loss": 3.092570057746825,
+        "val_response_tokens": 11010
+      },
+      {
+        "epoch": 1,
+        "step": 500,
+        "train_loss": 2.2188875726364135,
+        "train_response_tokens": 224123,
+        "val_loss": 2.097846567674077,
+        "val_response_tokens": 11010,
+        "elapsed_seconds": 107.82900850000078,
+        "peak_memory_mib": 702.42578125
+      },
+      {
+        "epoch": 2,
+        "step": 1000,
+        "train_loss": 1.9878330334495709,
+        "train_response_tokens": 224123,
+        "val_loss": 2.0996730690756027,
+        "val_response_tokens": 11010,
+        "elapsed_seconds": 215.28111220000028,
+        "peak_memory_mib": 713.421875
+      },
+      {
+        "epoch": 3,
+        "step": 1500,
+        "train_loss": 1.855770407814976,
+        "train_response_tokens": 224123,
+        "val_loss": 2.120461634892317,
+        "val_response_tokens": 11010,
+        "elapsed_seconds": 322.51355859999967,
+        "peak_memory_mib": 713.421875
+      }
+    ],
+    "best_step": 500,
+    "test_metrics": {
+      "response_cross_entropy": 2.0876521554699488,
+      "response_perplexity": 8.06595530656924,
+      "response_tokens_scored": 10924,
+      "two_sentences": 399,
+      "two_sentence_rate": 0.9975,
+      "eos_stops": 400,
+      "eos_rate": 1.0,
+      "two_sentences_and_eos": 399,
+      "two_sentences_and_eos_rate": 0.9975,
+      "generation_seconds": 20.370017299999745,
+      "exact_repeated_sentence_pairs": 9
+    }
+  },
+  "blind_review": {
+    "reviewer": "Codex (single AI reviewer)",
+    "questions": 60,
+    "scores": {
+      "continuity": {
+        "passed": 44,
+        "scored": 60,
+        "rate": 0.7333333333333333
+      },
+      "goal_progress": {
+        "passed": 2,
+        "scored": 6,
+        "rate": 0.3333333333333333
+      },
+      "no_repetition": {
+        "passed": 38,
+        "scored": 60,
+        "rate": 0.6333333333333333
+      }
+    }
+  },
+  "checkpoints_sha256": {
+    "pretrain.pt": "e09018628b6623a8e8a0d58b95bbef8ec5112ccbdb85c8d66c4d552e55b4f57e",
+    "sft.pt": "1a36a5decdafc69b4a8b89df594db52c660bcf9a010813b23d9da549fd1c6f9a",
+    "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198"
+  }
+}

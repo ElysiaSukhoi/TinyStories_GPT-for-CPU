@@ -1,0 +1,541 @@
+{
+  "reviewer": "Codex (single AI reviewer)",
+  "questions": 60,
+  "anonymous_scores_sha256": "7426517013ff0686f56a587f63ff0a4d5dd87c2c776d8193a3a35a9d8df74c94",
+  "questions_sha256": "0b2d32ffd319c17c919b076228705217864827c214dd83d811bc9bf474fee3ff",
+  "models": {
+    "a": {
+      "continuity": {
+        "passed": 40,
+        "scored": 60,
+        "rate": 0.6666666666666666
+      },
+      "goal_progress": {
+        "passed": 4,
+        "scored": 6,
+        "rate": 0.6666666666666666
+      },
+      "no_repetition": {
+        "passed": 29,
+        "scored": 60,
+        "rate": 0.48333333333333334
+      }
+    },
+    "b": {
+      "continuity": {
+        "passed": 44,
+        "scored": 60,
+        "rate": 0.7333333333333333
+      },
+      "goal_progress": {
+        "passed": 2,
+        "scored": 6,
+        "rate": 0.3333333333333333
+      },
+      "no_repetition": {
+        "passed": 38,
+        "scored": 60,
+        "rate": 0.6333333333333333
+      }
+    },
+    "v1": {
+      "continuity": {
+        "passed": 24,
+        "scored": 60,
+        "rate": 0.4
+      },
+      "goal_progress": {
+        "passed": 1,
+        "scored": 6,
+        "rate": 0.16666666666666666
+      },
+      "no_repetition": {
+        "passed": 38,
+        "scored": 60,
+        "rate": 0.6333333333333333
+      }
+    }
+  },
+  "model_order_by_case": [
+    {
+      "review_order": 1,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 2,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 3,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 4,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 5,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 6,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 7,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 8,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 9,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 10,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 11,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 12,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 13,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 14,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 15,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 16,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 17,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 18,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 19,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 20,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 21,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 22,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 23,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 24,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 25,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 26,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 27,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 28,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 29,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 30,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 31,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 32,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 33,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 34,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 35,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 36,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 37,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 38,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 39,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 40,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 41,
+      "mapping": {
+        "X": "b",
+        "Y": "a",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 42,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 43,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 44,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 45,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 46,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 47,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 48,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 49,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 50,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 51,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 52,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 53,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 54,
+      "mapping": {
+        "X": "a",
+        "Y": "b",
+        "Z": "v1"
+      }
+    },
+    {
+      "review_order": 55,
+      "mapping": {
+        "X": "v1",
+        "Y": "b",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 56,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 57,
+      "mapping": {
+        "X": "a",
+        "Y": "v1",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 58,
+      "mapping": {
+        "X": "v1",
+        "Y": "a",
+        "Z": "b"
+      }
+    },
+    {
+      "review_order": 59,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    },
+    {
+      "review_order": 60,
+      "mapping": {
+        "X": "b",
+        "Y": "v1",
+        "Z": "a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1386 @@
+{
+  "reviewer": "Codex (single AI reviewer)",
+  "questions_sha256": "0b2d32ffd319c17c919b076228705217864827c214dd83d811bc9bf474fee3ff",
+  "cases": [
+    {
+      "review_order": 1,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "leaves the house setting behind"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches to an unrelated park scene"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 2,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree and tree"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 3,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "replaces Ruth with Rular and repeats the opening phrase"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats shiny as filler"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "replaces Ruth with Rogie and Rachel and restates fear"
+        }
+      }
+    },
+    {
+      "review_order": 4,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats rain and cold without a new event"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the same rain and cold description"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "switches from rain to repeated sunshine"
+        }
+      }
+    },
+    {
+      "review_order": 5,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats taking a walk in the forest"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 6,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches away from the room and dancing to tag"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats picture of a picture"
+        }
+      }
+    },
+    {
+      "review_order": 7,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "loops around picture of a picture"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops crayons and switches to a dress with a phrase loop"
+        }
+      }
+    },
+    {
+      "review_order": 8,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": true,
+          "no_repetition": false,
+          "note": "runs to the park despite the departure cue and repeats the action"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "accepts leaving without advancing the park wish"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": true,
+          "no_repetition": true,
+          "note": "runs to the park without addressing Mom's instruction"
+        }
+      }
+    },
+    {
+      "review_order": 9,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops making things and repeats scary monster information"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches to a generic walk unrelated to making things"
+        }
+      }
+    },
+    {
+      "review_order": 10,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "loops box and toy phrases"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "restates the same box of toys"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats books and toys"
+        }
+      }
+    },
+    {
+      "review_order": 11,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches from carrots to an unrelated nap"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 12,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "adds a third sentence that restates fear"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree"
+        }
+      }
+    },
+    {
+      "review_order": 13,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree"
+        }
+      }
+    },
+    {
+      "review_order": 14,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 15,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "replaces the forest description with repeated water phrases"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree"
+        }
+      }
+    },
+    {
+      "review_order": 16,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "drops the newspaper and abandons waiting"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "mentions the newspaper but only states a wish to see it"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": false,
+          "no_repetition": false,
+          "note": "drops the newspaper and repeats excitement"
+        }
+      }
+    },
+    {
+      "review_order": 17,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats animals in the first sentence"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "abandons drawing and leaves the second sentence unresolved"
+        }
+      }
+    },
+    {
+      "review_order": 18,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": false,
+          "no_repetition": false,
+          "note": "loses the friends and loops on red"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": true,
+          "no_repetition": false,
+          "note": "starts the outing but repeats tree phrases"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": true,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 19,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces the cheese with an implausible ball to eat"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 20,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": false,
+          "note": "restates the vacation and excitement without advancing the trip"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": false,
+          "note": "restates the trip and excitement"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": true,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 21,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the same sentence"
+        }
+      }
+    },
+    {
+      "review_order": 22,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops the pirate ship scenario for shapes and books"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "changes the ship into a toy box and repeats it"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats pretending to be pirates"
+        }
+      }
+    },
+    {
+      "review_order": 23,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "retains the nurse but offers no action to help or protect anyone"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": false,
+          "no_repetition": false,
+          "note": "repeats kind and hug without a safety action"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "turns the nurse into a generic playmate and drops her goal"
+        }
+      }
+    },
+    {
+      "review_order": 24,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the house fire and repeats tree"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "loops on the firefight and help without a clear event"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the same family sentence"
+        }
+      }
+    },
+    {
+      "review_order": 25,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces Fin with Buzz and leaves the pond scenario"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats fish and bigness with little new information"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 26,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the exact kitten sentence"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces the kitten with a little girl and loses the tree"
+        }
+      }
+    },
+    {
+      "review_order": 27,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "loops on singing"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops singing and ends with an incomplete idea"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches from singing to a generic slide story"
+        }
+      }
+    },
+    {
+      "review_order": 28,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 29,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "leaves the special file behind for a generic walk"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops the file for an unrelated monster"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the file and repeats big tree"
+        }
+      }
+    },
+    {
+      "review_order": 30,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the doctor tools and restates making a mess"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "swaps doctor play for princess play and repeats princess"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops doctor play and repeats the same sentence"
+        }
+      }
+    },
+    {
+      "review_order": 31,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the stable and restates wanting to make something"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "the shiny ball has no referent in the stable"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "leaves the stable setting and uses an unexplained it"
+        }
+      }
+    },
+    {
+      "review_order": 32,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "loses the salt jar and repeats making a pot"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "swaps the salt for paper and stops mid-thought"
+        }
+      }
+    },
+    {
+      "review_order": 33,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "transfers the focus from Buzz to the bird Tim and confuses its action"
+        }
+      }
+    },
+    {
+      "review_order": 34,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the same excitement sentence"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 35,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the same bus sentence"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "turns the bus into a car and repeats its size"
+        }
+      }
+    },
+    {
+      "review_order": 36,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats take a break and jumps from grumpiness to excitement"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "shifts to a generic park walk with no connection to the store or mood"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches to a park meeting with no connection to the store or mood"
+        }
+      }
+    },
+    {
+      "review_order": 37,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "says Spot both saw and could not see the tree"
+        }
+      }
+    },
+    {
+      "review_order": 38,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces the squash in its garden with a girl in a park"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces the squash with a fisherman"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches from the squash to an unexplained boy"
+        }
+      }
+    },
+    {
+      "review_order": 39,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "restates that the monster is scary"
+        }
+      }
+    },
+    {
+      "review_order": 40,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "abandons dolls for a monster and repeats scary"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "abandons dolls and repeats make it up"
+        }
+      }
+    },
+    {
+      "review_order": 41,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches the setup about play with friends to an unrelated hose task"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats Timmy's happiness"
+        }
+      }
+    },
+    {
+      "review_order": 42,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats that the king was always happy"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 43,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats that the friends play together"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree"
+        }
+      }
+    },
+    {
+      "review_order": 44,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "replaces Buster with Biger and repeats his introduction"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats that the monster was scary"
+        }
+      }
+    },
+    {
+      "review_order": 45,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the computer and loops on pretending and boxes"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the computer and loops on boxes"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the computer and repeats books and box"
+        }
+      }
+    },
+    {
+      "review_order": 46,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": true,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": false,
+          "no_repetition": true,
+          "note": "restates the toy wish and switches to a walk without taking action on the toy"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": true,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 47,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats juicy"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "switches from the cooking and favorite food to clearing the table"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 48,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "replaces the train with a car and repeats very big"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "reiterates that people were sad"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "turns the train into the protagonist and drops Suzie and boarding"
+        }
+      }
+    },
+    {
+      "review_order": 49,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 50,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "abruptly switches from the room to the park and lacks a referent for inside"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 51,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats big tree"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 52,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "reiterates that the monster was scary"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "conflates the two wolves and repeats wolf ambiguously"
+        }
+      }
+    },
+    {
+      "review_order": 53,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "goes to the park and drops the named teddy bear"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "goes to the park with Mom and drops the named teddy bear"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 54,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "does not respond to the leak and repeats some food"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the leak and repeats making a message"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "drops the leak and repeats the family's excitement"
+        }
+      }
+    },
+    {
+      "review_order": 55,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops the pole for an unrelated stone"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops the pole and backyard to introduce a monster in the park"
+        },
+        "Z": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops the pole and abruptly introduces an unexplained ball"
+        }
+      }
+    },
+    {
+      "review_order": 56,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats helping people and friends in the same clause"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "shifts from helping others to making things without a clear connection"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 57,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "drops Max and shifts to an isolated walk"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "loses Mina and the partnership"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 58,
+      "ratings": {
+        "X": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "replaces Brownie with Ellie and the dog Max"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the monster's scariness"
+        }
+      }
+    },
+    {
+      "review_order": 59,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats that the monster was scary"
+        },
+        "Y": {
+          "continuity": false,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": "shifts from the tower and village to an unrelated park scene"
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    },
+    {
+      "review_order": 60,
+      "ratings": {
+        "X": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": false,
+          "note": "repeats the monster's scariness"
+        },
+        "Y": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        },
+        "Z": {
+          "continuity": true,
+          "goal_progress": null,
+          "no_repetition": true,
+          "note": ""
+        }
+      }
+    }
+  ]
+}

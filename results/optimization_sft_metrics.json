@@ -1,0 +1,242 @@
+{
+  "evaluation": {
+    "test_examples": 400,
+    "prompt_template": "Continue the story in exactly two sentences.\nOpening: {opening}\nContinuation:\n",
+    "decoding": "greedy",
+    "context_length": 128,
+    "max_new_tokens": 64,
+    "eos_id": 1
+  },
+  "threads": 4,
+  "batch_size": 16,
+  "data_sha256": {
+    "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+    "sft_train.jsonl": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+    "sft_val.jsonl": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a",
+    "sft_test.jsonl": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d"
+  },
+  "models": {
+    "v1": {
+      "parameters": 2590848,
+      "sft_checkpoint_sha256": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+      "sft_best_step": 500,
+      "pretrain_train_seconds": 757.0810218000042,
+      "pretrain_peak_mib": 522.72265625,
+      "sft_peak_mib": null,
+      "sft": {
+        "seed": 42,
+        "learning_rate": 0.0001,
+        "threads": 4,
+        "batch_size": 16,
+        "pretrain_step": 4000,
+        "pretrain_sha256": "467cb96fd962753605e733321c4a6ff7538cdfddd3fa616f1b6050a0ac96b963",
+        "tokenizer_sha256": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "splits_sha256": {
+          "train": "7d0cb30f7fc99b8d8ec0c76f936314e41860835b361c713191907cbbe0e9b826",
+          "val": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a"
+        },
+        "best_epoch": 2,
+        "history": [
+          {
+            "epoch": 0,
+            "step": 0,
+            "val_loss": 3.4365493356910863,
+            "val_response_tokens": 11010
+          },
+          {
+            "epoch": 1,
+            "step": 250,
+            "train_loss": 2.7911627451438883,
+            "train_response_tokens": 110212,
+            "val_loss": 2.6363650989142684,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 27.07125309999992
+          },
+          {
+            "epoch": 2,
+            "step": 500,
+            "train_loss": 2.556824120697134,
+            "train_response_tokens": 110212,
+            "val_loss": 2.610908578137286,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 60.01878839999995
+          },
+          {
+            "epoch": 3,
+            "step": 750,
+            "train_loss": 2.4419500581587275,
+            "train_response_tokens": 110212,
+            "val_loss": 2.6109132683786016,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 91.98456609999994
+          }
+        ]
+      },
+      "metrics": {
+        "response_cross_entropy": 2.5905218352244828,
+        "response_perplexity": 13.336729362796763,
+        "response_tokens_scored": 10924,
+        "two_sentences": 396,
+        "two_sentence_rate": 0.99,
+        "eos_stops": 399,
+        "eos_rate": 0.9975,
+        "two_sentences_and_eos": 396,
+        "two_sentences_and_eos_rate": 0.99,
+        "generation_seconds": 12.09408330000042,
+        "exact_repeated_sentence_pairs": 17
+      },
+      "generation_tokens": 9375,
+      "generation_tokens_per_second": 775.1724349376422
+    },
+    "a": {
+      "parameters": 2590848,
+      "sft_checkpoint_sha256": "cb505bbe62420c6320d7a3fc57d2db0a894ffb270d1df51c3163e1569ec9f8b6",
+      "sft_best_step": 1000,
+      "pretrain_train_seconds": 2252.9064123,
+      "pretrain_peak_mib": 534.31640625,
+      "sft_peak_mib": 676.52734375,
+      "sft": {
+        "seed": 42,
+        "learning_rate": 0.0001,
+        "threads": 4,
+        "batch_size": 16,
+        "pretrain_step": 12000,
+        "pretrain_sha256": "8b6024ac6643d18df07b6264b35a1f91ff9ddec701948a1092d4584ffdcc9893",
+        "tokenizer_sha256": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "splits_sha256": {
+          "train": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+          "val": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a"
+        },
+        "best_epoch": 2,
+        "history": [
+          {
+            "epoch": 0,
+            "step": 0,
+            "val_loss": 3.083170963373106,
+            "val_response_tokens": 11010
+          },
+          {
+            "epoch": 1,
+            "step": 500,
+            "train_loss": 2.3105716446226907,
+            "train_response_tokens": 224123,
+            "val_loss": 2.183701018828029,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 68.85410069999853,
+            "peak_memory_mib": 653.6171875
+          },
+          {
+            "epoch": 2,
+            "step": 1000,
+            "train_loss": 2.113862035573674,
+            "train_response_tokens": 224123,
+            "val_loss": 2.180099456923101,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 140.34016359999987,
+            "peak_memory_mib": 676.52734375
+          },
+          {
+            "epoch": 3,
+            "step": 1500,
+            "train_loss": 2.0132538753069804,
+            "train_response_tokens": 224123,
+            "val_loss": 2.2029770237440203,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 211.10068820000015,
+            "peak_memory_mib": 676.52734375
+          }
+        ]
+      },
+      "metrics": {
+        "response_cross_entropy": 2.1700635647455093,
+        "response_perplexity": 8.75884077653118,
+        "response_tokens_scored": 10924,
+        "two_sentences": 400,
+        "two_sentence_rate": 1.0,
+        "eos_stops": 400,
+        "eos_rate": 1.0,
+        "two_sentences_and_eos": 400,
+        "two_sentences_and_eos_rate": 1.0,
+        "generation_seconds": 14.046803200000795,
+        "exact_repeated_sentence_pairs": 13
+      },
+      "generation_tokens": 10344,
+      "generation_tokens_per_second": 736.3953102154528
+    },
+    "b": {
+      "parameters": 4240896,
+      "sft_checkpoint_sha256": "1a36a5decdafc69b4a8b89df594db52c660bcf9a010813b23d9da549fd1c6f9a",
+      "sft_best_step": 500,
+      "pretrain_train_seconds": 3659.7222201000004,
+      "pretrain_peak_mib": 596.875,
+      "sft_peak_mib": 713.421875,
+      "sft": {
+        "seed": 42,
+        "learning_rate": 0.0001,
+        "threads": 4,
+        "batch_size": 16,
+        "pretrain_step": 11500,
+        "pretrain_sha256": "e09018628b6623a8e8a0d58b95bbef8ec5112ccbdb85c8d66c4d552e55b4f57e",
+        "tokenizer_sha256": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "splits_sha256": {
+          "train": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+          "val": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a"
+        },
+        "best_epoch": 1,
+        "history": [
+          {
+            "epoch": 0,
+            "step": 0,
+            "val_loss": 3.092570057746825,
+            "val_response_tokens": 11010
+          },
+          {
+            "epoch": 1,
+            "step": 500,
+            "train_loss": 2.2188875726364135,
+            "train_response_tokens": 224123,
+            "val_loss": 2.097846567674077,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 107.82900850000078,
+            "peak_memory_mib": 702.42578125
+          },
+          {
+            "epoch": 2,
+            "step": 1000,
+            "train_loss": 1.9878330334495709,
+            "train_response_tokens": 224123,
+            "val_loss": 2.0996730690756027,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 215.28111220000028,
+            "peak_memory_mib": 713.421875
+          },
+          {
+            "epoch": 3,
+            "step": 1500,
+            "train_loss": 1.855770407814976,
+            "train_response_tokens": 224123,
+            "val_loss": 2.120461634892317,
+            "val_response_tokens": 11010,
+            "elapsed_seconds": 322.51355859999967,
+            "peak_memory_mib": 713.421875
+          }
+        ]
+      },
+      "metrics": {
+        "response_cross_entropy": 2.0876521554699488,
+        "response_perplexity": 8.06595530656924,
+        "response_tokens_scored": 10924,
+        "two_sentences": 399,
+        "two_sentence_rate": 0.9975,
+        "eos_stops": 400,
+        "eos_rate": 1.0,
+        "two_sentences_and_eos": 399,
+        "two_sentences_and_eos_rate": 0.9975,
+        "generation_seconds": 20.370017299999745,
+        "exact_repeated_sentence_pairs": 9
+      },
+      "generation_tokens": 9581,
+      "generation_tokens_per_second": 470.3481523307356
+    }
+  }
+}

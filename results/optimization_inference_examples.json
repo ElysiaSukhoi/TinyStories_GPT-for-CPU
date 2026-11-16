@@ -1,0 +1,71 @@
+{
+  "bundle_sha256": "b064e52432fb5a6b20ae9491c2865d80b992b69494d5acdc6daec9815d8d5a2c",
+  "paper_boat": {
+    "v1": {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She wanted to make a big boat. She wanted to make the boat out of the boat.",
+      "new_tokens": 21,
+      "generation_seconds": 0.061194399999294546,
+      "tokens_per_second": 343.168655959403,
+      "stop_reason": "eos"
+    },
+    "a": {
+      "model": "sft",
+      "checkpoint_step": 1000,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She was very happy. She wanted to show her mom and dad her paper.",
+      "new_tokens": 18,
+      "generation_seconds": 0.05375150000145368,
+      "tokens_per_second": 334.87437558976404,
+      "stop_reason": "eos"
+    },
+    "b": {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She was very happy and wanted to show it to her friends. Mia was very happy and excited.",
+      "new_tokens": 22,
+      "generation_seconds": 0.09315450000030978,
+      "tokens_per_second": 236.16679816784847,
+      "stop_reason": "eos"
+    }
+  },
+  "packaged_pretrain": {
+    "model": "pretrain",
+    "checkpoint_step": 11500,
+    "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+    "continuation": " She was so happy and thanked her mom. She put the boat in the water and went to the pond. She saw a big fish and wanted to catch it. She ran to the pond and tried to catch it. But the fish was too fast. It was too fast and too fast. Mia was scared and ran",
+    "new_tokens": 64,
+    "generation_seconds": 0.22218450000036682,
+    "tokens_per_second": 288.04889629967136,
+    "stop_reason": "max_new_tokens"
+  },
+  "review_examples": {
+    "success": {
+      "review_order": 18,
+      "test_row": 48,
+      "story_id": "1deab28c684cd945df7b9260cc7872be604841a65bd3aea65e731740e83e4c09",
+      "generated": "They went to the park and saw a big slide. They wanted to go first, but they were too small.",
+      "anonymous_review": {
+        "continuity": true,
+        "goal_progress": true,
+        "no_repetition": true,
+        "note": ""
+      }
+    },
+    "failure": {
+      "review_order": 8,
+      "test_row": 72,
+      "story_id": "02418fc9fd177d61d4a58056859764d74033697cd6b9db6fb72a9d63c7179512",
+      "generated": "She said she would be a good girl. Alice was sad.",
+      "anonymous_review": {
+        "continuity": true,
+        "goal_progress": false,
+        "no_repetition": true,
+        "note": "accepts leaving without advancing the park wish"
+      }
+    }
+  }
+}

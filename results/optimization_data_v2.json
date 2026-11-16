@@ -1,0 +1,139 @@
+{
+  "dataset": "roneneldan/TinyStories",
+  "dataset_revision": "6d02f92396f7e3e60c2251070b6e0b168568074b",
+  "license": "CDLA-Sharing-1.0",
+  "shards": {
+    "train": [
+      {
+        "file": "train-00000-of-00004-2d5a1467fff1081b.parquet",
+        "sha256": "77cf780cebe52b6e83e3a2ac84bc56d8059363113e41d17a023f1d8b2ed0fc0b"
+      },
+      {
+        "file": "train-00001-of-00004-5852b56a2bd28fd9.parquet",
+        "sha256": "e2f173a6dcc2b5895183e8ad376e115bd5c06764eb0cfc01ce1add156b2d017f"
+      },
+      {
+        "file": "train-00002-of-00004-a26307300439e943.parquet",
+        "sha256": "cac73cd1a0973a7fccde022a5a5c78f8ba58ea6849541835c58e7c5fc747f2ef"
+      },
+      {
+        "file": "train-00003-of-00004-d243063613e5a057.parquet",
+        "sha256": "862514ae75723ddd339337f1ef7617b88f82290dcddd57445e1d38d257ca7891"
+      }
+    ],
+    "validation": {
+      "file": "validation-00000-of-00001-869c898b519ad725.parquet",
+      "sha256": "33406a6206554cfc279c29c11f4df51528af487aa1a602b075566fc83c49dcab"
+    }
+  },
+  "seed": 42,
+  "scan": {
+    "train": {
+      "0": {
+        "shard_rows": 529930,
+        "sampled_rows": 22000,
+        "unique_stories": 9770,
+        "empty_rows": 1,
+        "duplicate_rows": 12229
+      },
+      "1": {
+        "shard_rows": 529930,
+        "sampled_rows": 22000,
+        "unique_stories": 21747,
+        "empty_rows": 2,
+        "duplicate_rows": 251
+      },
+      "2": {
+        "shard_rows": 529930,
+        "sampled_rows": 22000,
+        "unique_stories": 21699,
+        "empty_rows": 3,
+        "duplicate_rows": 298
+      },
+      "3": {
+        "shard_rows": 529929,
+        "sampled_rows": 22000,
+        "unique_stories": 21607,
+        "empty_rows": 1,
+        "duplicate_rows": 392
+      }
+    },
+    "validation": {
+      "shard_rows": 21990,
+      "sampled_rows": 21990,
+      "unique_stories": 21990,
+      "empty_rows": 0,
+      "duplicate_rows": 0
+    }
+  },
+  "vocab_size": 4096,
+  "special_token_ids": {
+    "bos": 0,
+    "eos": 1,
+    "pad": 2
+  },
+  "context_length": 128,
+  "pretrain_bin_dtype": "<u2",
+  "splits": {
+    "pretrain_train": {
+      "stories": 80000,
+      "tokens": 17762182
+    },
+    "pretrain_val": {
+      "stories": 1500,
+      "tokens": 323458
+    },
+    "sft_test": {
+      "stories": 400,
+      "min_tokens": 61,
+      "max_tokens": 128
+    },
+    "sft_val": {
+      "stories": 400,
+      "min_tokens": 57,
+      "max_tokens": 113
+    },
+    "sft_train": {
+      "stories": 8000,
+      "min_tokens": 55,
+      "max_tokens": 128
+    }
+  },
+  "data_version": 2,
+  "smoke": false,
+  "frozen_files_sha256": {
+    "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+    "pretrain_val.bin": "d4f9da7026cf1b13887cb9cf33e4a9f452fa074ea4f4b41268ab2c6432b23d5e",
+    "pretrain_val.jsonl": "0988f9c60137d3beaa85914e283c612b6565dce901f2c22f1fbbb2e6b439514e",
+    "sft_val.jsonl": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a",
+    "sft_test.jsonl": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d"
+  },
+  "new_train_by_shard": {
+    "pretrain": {
+      "0": 6207,
+      "1": 14076,
+      "2": 13910,
+      "3": 13807
+    },
+    "sft": {
+      "0": 514,
+      "1": 1121,
+      "2": 1177,
+      "3": 1188
+    }
+  },
+  "sft_selection": {
+    "new_examples": 4000,
+    "new_min_tokens": 56,
+    "new_max_tokens": 127,
+    "rejected_by_first_reason": {
+      "context_overflow": 2,
+      "duplicate_opening": 297,
+      "missing_lexical_anchor": 1261,
+      "name_discontinuity": 231,
+      "repeated_phrase": 45,
+      "unusable_sentence_boundaries": 1217
+    },
+    "rules": "Adjacent narrative sentences with lexical anchoring and new content; reject resets, exact sentence or four-word repeats, and detectable names that lose all opening names."
+  }
+}

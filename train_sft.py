@@ -11,7 +11,7 @@ from tokenizers import Tokenizer
 
 from checkpoints import load_model, sha256
 from scripts.story_task import EOS, PAD, encode_example, narrative_sentences
-from train_pretrain import PROJECT, lock_run, save_checkpoint, write_atomic, write_json
+from train_pretrain import PROJECT, lock_run, peak_memory_mib, save_checkpoint, write_atomic, write_json
 
 IGNORE = -100
 MAX_NEW_TOKENS = 64
@@ -92,6 +92,7 @@ def train(model, tokenizer, source_step, tokenizer_hash, source_hash, args):
             "epoch": epoch, "step": step, "train_loss": loss_sum / tokens_seen,
             "train_response_tokens": tokens_seen, "val_loss": val_loss,
             "val_response_tokens": val_tokens, "elapsed_seconds": perf_counter() - started,
+            "peak_memory_mib": peak_memory_mib(),
         }
         history.append(row)
         if val_loss < best_loss:

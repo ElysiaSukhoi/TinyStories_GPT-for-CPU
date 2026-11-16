@@ -160,3 +160,126 @@ $opening = 'Mia found a paper boat beside the pond. She picked it up and looked 
 公开实验记录包括 [CPU 基准](results/cpu_benchmark.json)、[预训练曲线](results/pretrain_loss_curves.png)、[完整验证指标](results/pretrain_full_validation.json)、[微调测试指标](results/sft_test_metrics.json) 和[同题生成示例](results/sft_test_examples.json)。完整逐题输出由 `train_sft.py --evaluate` 写入 `runs/sft/test_outputs.jsonl`。权重包、训练缓存与可重建的数据位于本地的 Git 忽略目录。
 
 项目用 Python 3.12.16 新建隔离虚拟环境，从 `requirements.txt` 安装依赖后重建了数据，9 个产物的哈希全部一致。小批训练通过，压缩包内的两套权重都完成了 CPU 生成，测速记录保存在 [独立环境推理结果](results/cpu_inference.json)。
+
+## 第二轮优化的固定基线
+
+[基线清单](results/optimization_baseline_v1.json) 记录第一版权重、分词器、数据拆分和逐题结果的 SHA-256，同时保存正式评估设置和按固定种子抽取的 60 个题号。测试题号从 1 开始，`review_order` 是盲评展示顺序。可在仓库根目录用以下命令核验原始产物及题号。
+
+```powershell
+& .\.conda\python.exe -m scripts.freeze_baseline
+```
+
+正式比较对三套模型使用同一组 400 道题、提示模板、贪心解码、128 token 上下文和 64 token 新增长度上限。答案交叉熵按有效续写 token 和 EOS 汇总，生成端继续统计两句完成率和 EOS 停止率。用验证集选权重。
+
+生成齐三套输出后，按清单顺序展示 60 题。每题用种子 43 的同一个随机数生成器将模型顺序打乱（输入模型名先排序），展示匿名结果并保存单独的对应表，评分后再解盲。先看开头确定人物、相关物件和是否有明确目标，再按以下规则逐条记录。
+
+| 维度 | 记为通过的条件 |
+| --- | --- |
+| 人物和关键物件承接 | 续写延续已有情境，人物、物件及其角色前后一致。 |
+| 行动目标推进 | 续写给出与开头目标直接相关的新行动、线索或结果。开头无明确目标时记为不适用，并报告有效题数。 |
+| 无明显重复 | 两句各提供新的信息，句内也没有明显循环用语。 |
+
+每项记为通过、不通过或不适用，并在不通过时记一句理由。纸船题另作演示。
+
+## 构建扩充版训练数据
+
+从仓库根目录执行以下命令。首次使用 `--smoke` 可检查小规模构建，完整数据默认生成到 `data/prepared-v2`。已有输出时，可用 `--output-dir` 指定新的构建目录。构建会复用 `data/raw` 中的分片缓存并核对官方校验值。 [TinyStories 官方分片](https://huggingface.co/datasets/roneneldan/TinyStories/tree/main/data)
+
+```powershell
+& .\.conda\python.exe -m scripts.freeze_baseline
+& .\.conda\python.exe scripts/prepare_data_v2.py --smoke --output-dir runs/data-v2-smoke
+& .\.conda\python.exe scripts/prepare_data_v2.py
+```
+
+以种子 42 从四个训练分片各抽取 22,000 条候选，按归一化故事哈希去重并排除官方验证故事。先选新增 SFT 样本，再补充预训练故事。扩充后共有 **80,000 篇预训练故事、17,762,182 个 token**，其中新增 48,000 篇。SFT 训练集共 **8,000 条**，其中新增 4,000 条。预训练验证缓存、400 条 SFT 验证题、400 条测试题和分词器均与第一版逐字节一致。
+
+新增 SFT 样本使用同一故事中紧接开头的两句，要求续写沿用至少一个有内容的词并提供新信息。规则过滤重复句或四词短语、泛化开场及可识别姓名的断接。抽查 12 条可见人物或物件承接，也有与开头行动关系较弱的样本，情节推进会在后续盲评核验。
+
+两次小样本构建逐字节一致。全量检查核对了五个拆分的故事哈希、8,800 个互异的 SFT 开头、80,000 篇预训练故事的 BOS/EOS 边界，以及全部 8,000 条 SFT 的首个答案 token、EOS 和损失掩码。 [扩充版数据清单](results/optimization_data_v2.json)
+
+## 对比两档模型的预训练
+
+A 为 4 层 × 192（2,590,848 参数），B 为 4 层 × 256（4,240,896 参数）。两组均从随机初始化开始，使用同一份扩充数据、4 个 CPU 线程、种子 42、8 × 128 的微批、2 次梯度累积和 0.0003 学习率。先运行 250 步试跑并保存检查点，再续训到累计 12,000 步。两组各处理 24,576,000 个 token。
+
+```powershell
+foreach ($experiment in @(@{ Name='a'; Width=192 }, @{ Name='b'; Width=256 })) {
+    $phaseArgs = @('--data-dir', 'data/prepared-v2', '--run-dir', "runs/optimization/$($experiment.Name)",
+                   '--n-layers', '4', '--d-model', "$($experiment.Width)", '--eval-every', '500')
+    & .\.conda\python.exe -u train_pretrain.py @phaseArgs --steps 250
+    if ($LASTEXITCODE -ne 0) { throw 'Pilot failed' }
+    & .\.conda\python.exe -u train_pretrain.py @phaseArgs --steps 12000 --resume
+    if ($LASTEXITCODE -ne 0) { throw 'Pretraining failed' }
+}
+& .\.conda\python.exe -m scripts.compare_pretraining
+```
+
+每组独立存放 `last.pt`、`best.pt`、`metrics.json` 和 `samples.json`。已有运行从对应目录的 `last.pt` 续训，`--steps` 指定累计目标。比较程序核对设置、数据指纹及训练预算，在完整预训练验证缓存上评估两组最佳权重，再汇总到 `results/optimization_pretrain_ab.json`。
+
+两组均完成了 12,000 步。训练期间每次用固定的 32,768 个验证 token 选择最佳权重，随后用完整验证缓存的 323,456 个目标 token 复核。 [指标明细](results/optimization_pretrain_ab.json) · [验证损失曲线](results/optimization_pretrain_ab.png)
+
+| 组别 | 最佳步数 | 完整验证交叉熵 | 完整验证困惑度 | 两段运行耗时 | 峰值工作集 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| A | 12,000 | 2.4849 | 12.00 | 38.1 分钟 | 534 MiB |
+| B | 11,500 | 2.3951 | 10.97 | 61.9 分钟 | 597 MiB |
+
+用于第二轮监督微调的预训练权重分别位于 `runs/optimization/a/best.pt` 和 `runs/optimization/b/best.pt`。
+
+## 第二轮微调与盲评
+
+在仓库根目录按相同设置对 A、B 各做三轮全参数 SFT，每轮用冻结的 400 条验证题计算答案交叉熵，以此选择最佳权重。
+
+```powershell
+foreach ($group in @('a', 'b')) {
+    & .\.conda\python.exe -u train_sft.py --data-dir data/prepared-v2 --pretrained "runs/optimization/$group/best.pt" --run-dir "runs/optimization/$group/sft" --threads 4 --batch-size 16 --seed 42 --epochs 3 --lr 0.0001
+    if ($LASTEXITCODE -ne 0) { throw "SFT $group failed" }
+}
+& .\.conda\python.exe -u -m scripts.evaluate_optimization
+```
+
+比较程序生成 400 道题的三方输出 `runs/optimization/comparison/test_outputs.jsonl`，以及 60 道匿名题 `blind_questions.jsonl` 和独立的 `blind_key.json`。前者按原题序记录参考答案、生成 token 和格式判定。测试汇总记录答案交叉熵、两句完成率、EOS 停止率、两句完全重复的次数，以及 4 线程、批大小 16 时的 CPU 批量生成吞吐。
+
+匿名评分保存后运行下面的命令校验匿名题文件指纹和全部评分，再按对应表汇总。
+
+```powershell
+& .\.conda\python.exe -m scripts.summarize_blind_review
+```
+
+### 第二轮结果与权重选择
+
+A 组选择第 2 轮（1,000 步，验证答案交叉熵 2.1801），B 组选择第 1 轮（500 步，验证答案交叉熵 2.0978）。三套微调模型使用同一份 400 题评估，每套都计分 10,924 个答案 token（含 EOS）。 [测试明细](results/optimization_sft_metrics.json)
+
+| 指标 | 第一版 | A | B |
+| --- | ---: | ---: | ---: |
+| 答案交叉熵 | 2.5905 | 2.1701 | 2.0877 |
+| 恰好两句 | 396/400 | 400/400 | 399/400 |
+| EOS 停止 | 399/400 | 400/400 | 400/400 |
+| 两句措辞完全重复 | 17 | 13 | 9 |
+| 60 题盲评 · 人物和物件承接 | 24/60 | 40/60 | 44/60 |
+| 60 题盲评 · 无明显重复 | 38/60 | 29/60 | 38/60 |
+| 有明确目标的题 · 推进目标 | 1/6 | 4/6 | 2/6 |
+
+盲评由 Codex 单独完成。评分者先看匿名的 X/Y/Z 输出并保存评分，再用固定对应表汇总。60 题里只有 6 题有明确目标，这一项按有效题数计算。B 的目标推进低于 A，纸船题仍把找船主改成向朋友展示。B 在整批答案交叉熵、完全重复次数以及盲评人物与物件承接上得分最好，因此选为第二轮打包版本。 [匿名评分](results/optimization_blind_scores.json) · [解盲汇总](results/optimization_blind_review.json) · [纸船题和成功、失败样例](results/optimization_inference_examples.json)
+
+| CPU 成本 | 第一版 | A | B |
+| --- | ---: | ---: | ---: |
+| 参数量 | 2,590,848 | 2,590,848 | 4,240,896 |
+| 预训练主体 | 12.6 分钟 | 37.5 分钟 | 61.0 分钟 |
+| SFT 历时 | 92.0 秒 | 211.1 秒 | 322.5 秒 |
+| 预训练峰值工作集 | 523 MiB | 534 MiB | 597 MiB |
+| SFT 峰值工作集 | 661 MiB | 677 MiB | 713 MiB |
+| 测试集批量生成吞吐 | 775 token/s | 736 token/s | 470 token/s |
+
+第一版的 SFT 峰值来自同配置复跑，选定权重的张量和逐轮损失均与原始运行一致。批量生成吞吐包含 EOS，使用 4 个 CPU 线程和批大小 16。 [第一版峰值复测](results/optimization_v1_sft_resources.json)
+
+用本地 B 组权重复跑纸船题。命令输入为仓库根目录下的相对路径。
+
+```powershell
+$opening = 'Mia found a paper boat beside the pond. She picked it up and looked for its owner.'
+& .\.conda\python.exe generate.py --model sft --checkpoint runs/optimization/b/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --prompt $opening
+```
+
+第二轮权重包 `dist/tiny-gpt-cpu-v2-weights.zip` 已通过成员 SHA-256 检查，解压后的预训练与微调权重均完成 CPU 推理。压缩包包含两套权重、分词器、校验清单和数据及训练配置摘要。可用以下命令重新打包。 [训练配置摘要](results/optimization_release_summary.json)
+
+```powershell
+& .\.conda\python.exe -m scripts.package_weights --pretrain runs/optimization/b/best.pt --sft runs/optimization/b/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --summary results/optimization_release_summary.json --output dist/tiny-gpt-cpu-v2-weights.zip
+```

@@ -1,0 +1,356 @@
+{
+  "files_sha256": {
+    "data/prepared/manifest.json": "293e4d2cc9ca80225e78e2092753fad1a26764c433bcffb3f1068f7310b35471",
+    "data/prepared/tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+    "data/prepared/pretrain_train.bin": "66606dc45f30e8ff810f72d401fc39f22590a905974a268e4ca93e81b309e4ec",
+    "data/prepared/pretrain_val.bin": "d4f9da7026cf1b13887cb9cf33e4a9f452fa074ea4f4b41268ab2c6432b23d5e",
+    "data/prepared/pretrain_val.jsonl": "0988f9c60137d3beaa85914e283c612b6565dce901f2c22f1fbbb2e6b439514e",
+    "data/prepared/sft_train.jsonl": "7d0cb30f7fc99b8d8ec0c76f936314e41860835b361c713191907cbbe0e9b826",
+    "data/prepared/sft_val.jsonl": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a",
+    "data/prepared/sft_test.jsonl": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d",
+    "runs/pretrain/best.pt": "467cb96fd962753605e733321c4a6ff7538cdfddd3fa616f1b6050a0ac96b963",
+    "runs/pretrain/last.pt": "dec02f52a5a2493d8677e3f33276598169212b4101a98fcbee10e0069cf6918f",
+    "runs/sft/best.pt": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+    "runs/sft/test_outputs.jsonl": "c3a839fb2d62cfc0add8cb74bee15ce7c2f4539878745f06e76d4c7bcc176652",
+    "results/pretrain_metrics.json": "30ca165a63d14e3b1f4c0deccca0f9cda14ed2228393bc761db005b069e2ad1b",
+    "results/sft_training_metrics.json": "2ed69501089061f4900ba228e10d632f489bb49f05eb84861c9829e2bd83f7df",
+    "results/sft_test_metrics.json": "caf19f1a5b19529da4afbf04b19a470657d40338bd4e900b4a7c716938a9454e"
+  },
+  "dataset_revision": "6d02f92396f7e3e60c2251070b6e0b168568074b",
+  "model_config": {
+    "vocab_size": 4096,
+    "context_length": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "d_model": 192
+  },
+  "pretrain_step": 4000,
+  "sft_epoch": 2,
+  "sft_test_metrics": {
+    "response_cross_entropy": 2.5905218352244828,
+    "response_perplexity": 13.336729362796763,
+    "response_tokens_scored": 10924,
+    "two_sentences": 396,
+    "two_sentence_rate": 0.99,
+    "eos_stops": 399,
+    "eos_rate": 0.9975,
+    "two_sentences_and_eos": 396,
+    "two_sentences_and_eos_rate": 0.99,
+    "generation_seconds": 9.920577200000025
+  },
+  "evaluation": {
+    "test_examples": 400,
+    "prompt_template": "Continue the story in exactly two sentences.\nOpening: {opening}\nContinuation:\n",
+    "decoding": "greedy",
+    "context_length": 128,
+    "max_new_tokens": 64,
+    "eos_id": 1
+  },
+  "blind_review": {
+    "selection_seed": 42,
+    "selection": "Random(seed).sample(range(1, 401), 60), kept in review order",
+    "model_order_seed": 43,
+    "cases": [
+      {
+        "review_order": 1,
+        "test_row": 328,
+        "story_id": "daafcf3bb641e4a21ae1081b2d9e63793dff4cac85196927ccdd69e02c95682f"
+      },
+      {
+        "review_order": 2,
+        "test_row": 58,
+        "story_id": "2d38f42c711228e763e964ad1e0bf6f80314a3746ebaf74345041f341424aaee"
+      },
+      {
+        "review_order": 3,
+        "test_row": 13,
+        "story_id": "13554f9cfe7313af52843939b2e0fb48ddf5543386acd868567839fdd2eab25f"
+      },
+      {
+        "review_order": 4,
+        "test_row": 380,
+        "story_id": "987de34433926b98ff40203f03c1b4d5e8e773167e69df46f717edc2d4023eb8"
+      },
+      {
+        "review_order": 5,
+        "test_row": 141,
+        "story_id": "e3f155e24690028598ff4f80fb0fc6db9d99afd87d6e1ece82f006dd4736f64d"
+      },
+      {
+        "review_order": 6,
+        "test_row": 126,
+        "story_id": "0f35c0cafc434b6e8994b9b4701e1e66c3f0937c44003e31915257cf8716c690"
+      },
+      {
+        "review_order": 7,
+        "test_row": 115,
+        "story_id": "89c5f40cf5d9fc50ec6a7f344fcc97be46eced2047e9173e7e1a19c99f674468"
+      },
+      {
+        "review_order": 8,
+        "test_row": 72,
+        "story_id": "02418fc9fd177d61d4a58056859764d74033697cd6b9db6fb72a9d63c7179512"
+      },
+      {
+        "review_order": 9,
+        "test_row": 378,
+        "story_id": "1863013554c6d9ea1c047dbb0b2b256b57690f29d0ceb52e86696735ff14699d"
+      },
+      {
+        "review_order": 10,
+        "test_row": 53,
+        "story_id": "2a56cf793bce7f3e6866fd08fa6f8cff236bac35cd35fbe33aa190c3b66b954b"
+      },
+      {
+        "review_order": 11,
+        "test_row": 347,
+        "story_id": "923f883f23bf399d403b36aea01bde095185070dea008a35418fcaf476669052"
+      },
+      {
+        "review_order": 12,
+        "test_row": 280,
+        "story_id": "864b95d978913afdbe4936b601f4e16a154e3caf8e71b718ff317cff1221822b"
+      },
+      {
+        "review_order": 13,
+        "test_row": 45,
+        "story_id": "cedcda06aaf0ed9d04750ce68befbba0885de8f6fd5f4fac6bfe88af216aa036"
+      },
+      {
+        "review_order": 14,
+        "test_row": 303,
+        "story_id": "5ca91a28dd55b11756669b2866591e6e56f18b907df3d9c04b7df125a8706e9b"
+      },
+      {
+        "review_order": 15,
+        "test_row": 217,
+        "story_id": "f877a069e2a88e7d0a81d14811997441d2842fa247cc33ec90ac6f2727631cac"
+      },
+      {
+        "review_order": 16,
+        "test_row": 17,
+        "story_id": "839f217a043d800ff622629cb0a2d047d8dca9b064f25adc9a4988b8770caf06"
+      },
+      {
+        "review_order": 17,
+        "test_row": 16,
+        "story_id": "8130a384b172f91ae28c7b2bca23d03ea592cde404d7930cca900b0e05edfe2a"
+      },
+      {
+        "review_order": 18,
+        "test_row": 48,
+        "story_id": "1deab28c684cd945df7b9260cc7872be604841a65bd3aea65e731740e83e4c09"
+      },
+      {
+        "review_order": 19,
+        "test_row": 112,
+        "story_id": "47f9a12c559d813fa9530dde72c37a24e3a24d76e1a54ddd2b8fbbfd113b2d92"
+      },
+      {
+        "review_order": 20,
+        "test_row": 120,
+        "story_id": "158349a626a478f380bf9e4681c8cc8e377922091a53a35cdebb0c544c1b1198"
+      },
+      {
+        "review_order": 21,
+        "test_row": 259,
+        "story_id": "ae7609f7e15757859d79dfc073c4f6bf763e9a2ae5be4cc1fcfad54f7d6f4bee"
+      },
+      {
+        "review_order": 22,
+        "test_row": 309,
+        "story_id": "885b03e728c14052f12d1135da0410dffcd1b3bce6576e6509d6c67153ac0a68"
+      },
+      {
+        "review_order": 23,
+        "test_row": 14,
+        "story_id": "4492fef1b545a92d1c8ad52a2b7056397dc73383f614c5f019abe13adebf7f80"
+      },
+      {
+        "review_order": 24,
+        "test_row": 288,
+        "story_id": "46c0d7489f9218e0943aa7051641fad5054a104d0390a3e3db0c61731cde9c3e"
+      },
+      {
+        "review_order": 25,
+        "test_row": 102,
+        "story_id": "af03358143890bda22f1408d9c5ce3a0715ccbf3fb627c779e07d0826034b249"
+      },
+      {
+        "review_order": 26,
+        "test_row": 367,
+        "story_id": "3b97414219396a51fcf9d8fc3056b93bd20d87a023b7fac83374f764d1be27e6"
+      },
+      {
+        "review_order": 27,
+        "test_row": 333,
+        "story_id": "16f99260d3453d3934966fed59061856c677ae8eddf55c45a6650f2b92f397a0"
+      },
+      {
+        "review_order": 28,
+        "test_row": 360,
+        "story_id": "94f46e037a40186e95b14659e905173228b229617ccdd153a782e0c7d829cfbb"
+      },
+      {
+        "review_order": 29,
+        "test_row": 215,
+        "story_id": "9f14d2cad4b56090215da3e6f1525cc710fed58bbe9a70f1a5674ecee42590ca"
+      },
+      {
+        "review_order": 30,
+        "test_row": 113,
+        "story_id": "213ce661321f522f8a9e8db47213cce8c4183383c81e99fc5a9ecd365289ca43"
+      },
+      {
+        "review_order": 31,
+        "test_row": 230,
+        "story_id": "3dee3de2595b676235d1220255d456f22fe0bebf80f7591cec451f2e039123ca"
+      },
+      {
+        "review_order": 32,
+        "test_row": 302,
+        "story_id": "719919e83beefc844eadba843b34e7f64b7c5ff57e7f7eb12b77ee1d3f4f5d68"
+      },
+      {
+        "review_order": 33,
+        "test_row": 143,
+        "story_id": "8ceaf35417396e09f78686fcdf182b73b2387468499b12834ec14420fc840877"
+      },
+      {
+        "review_order": 34,
+        "test_row": 4,
+        "story_id": "f1e53b4d50f0c4c5c5d9a7ca0395f41d9b6d31b99e3fdb20341f3ce2e7b3104e"
+      },
+      {
+        "review_order": 35,
+        "test_row": 389,
+        "story_id": "87ab8a897c219328ac16022726858d8193f610321bd8dd864409ae56d2fc43ac"
+      },
+      {
+        "review_order": 36,
+        "test_row": 82,
+        "story_id": "d52ff6fda26f0bb4c535f2e784387ba849b50f294e93512d3df2b34ad655c46a"
+      },
+      {
+        "review_order": 37,
+        "test_row": 358,
+        "story_id": "89b85652e3f6daa0555d3e5f24ff0d8e44e891c595f19ba707b031aecfc2b790"
+      },
+      {
+        "review_order": 38,
+        "test_row": 175,
+        "story_id": "8fd5d56297dab1bd24dcad47896edee83e22b0b2c350cee3384de0b471c7461f"
+      },
+      {
+        "review_order": 39,
+        "test_row": 80,
+        "story_id": "4c9bc19a4f0b17ca2ca561b317f02f51ba52922f33d0a9642c7a2f80c37a68fd"
+      },
+      {
+        "review_order": 40,
+        "test_row": 111,
+        "story_id": "2b7319232cbead35664495983f35aa9a54bb7c95ca298d0d6fe1bcc6e252a77c"
+      },
+      {
+        "review_order": 41,
+        "test_row": 391,
+        "story_id": "5848d25f7077a7262e5af1fbcfb20187a919efc8d7bf654112aa66bbf75c33c4"
+      },
+      {
+        "review_order": 42,
+        "test_row": 173,
+        "story_id": "45034a1efe4f091ecfd45656b149ffaf61eb658074c0e17943a639c34270c372"
+      },
+      {
+        "review_order": 43,
+        "test_row": 195,
+        "story_id": "6fd9d70548940b174482e7ea5b48d77e5f643eb524990e3df00ce3380541c107"
+      },
+      {
+        "review_order": 44,
+        "test_row": 50,
+        "story_id": "790559c49599ed9bf29ba134e4ee3f4807baf8f2d5acedcf6bb5c97a67041a1f"
+      },
+      {
+        "review_order": 45,
+        "test_row": 184,
+        "story_id": "2c01c8919c7f1c3440c27f05bd37e606332731cdc45487578cff14b1db4d3c48"
+      },
+      {
+        "review_order": 46,
+        "test_row": 177,
+        "story_id": "e3510caf1f93a76d5a6cf0fbf46552036600560d753bd198720d534f4d061f9f"
+      },
+      {
+        "review_order": 47,
+        "test_row": 310,
+        "story_id": "5b78fd872825efe4cba80bba108b887f190fb2afc4f27d465007b45f579a88bb"
+      },
+      {
+        "review_order": 48,
+        "test_row": 136,
+        "story_id": "6083bac2c7438e741455f95d3553275246919565f5101eeecf8ab84251a46cfa"
+      },
+      {
+        "review_order": 49,
+        "test_row": 23,
+        "story_id": "8dfb96ebcac2f1154b17647d767f1f9dcf47bf4494ed268f00b988f259f26a94"
+      },
+      {
+        "review_order": 50,
+        "test_row": 374,
+        "story_id": "06f0cf39f522486634cec29eeccc10de7ecc4ee3cdb2442f37462d887db9a987"
+      },
+      {
+        "review_order": 51,
+        "test_row": 236,
+        "story_id": "5d7648e89da17ddcac93c1bb9690b46affeca5164a9f5a0bd438c82d11feccce"
+      },
+      {
+        "review_order": 52,
+        "test_row": 275,
+        "story_id": "bc711befda79163dd112396226b2bb920a8544f489c69cd6e58cd3cc3c5e44bc"
+      },
+      {
+        "review_order": 53,
+        "test_row": 64,
+        "story_id": "8b03f38fc80e5304510b2161691236a55ed1fc8d54061b683461ee5085712910"
+      },
+      {
+        "review_order": 54,
+        "test_row": 194,
+        "story_id": "20e2f9ef72ec5fefac1b8f9ea186cbd27ca009dec7470777e2033da427492b9a"
+      },
+      {
+        "review_order": 55,
+        "test_row": 41,
+        "story_id": "6258dcdbf7c97fcf2f3d04b65e5d64b6a18b3b37bd1fb32ef8995718812bdd2c"
+      },
+      {
+        "review_order": 56,
+        "test_row": 283,
+        "story_id": "0fdd44de4480e86853bb0806f996dd487cfb672f6e933244a858fade5184eb89"
+      },
+      {
+        "review_order": 57,
+        "test_row": 151,
+        "story_id": "6715af3bcc7b787e15c9491df62e1fa4afbe552331de8a0cd1aca6fd4cbfa14a"
+      },
+      {
+        "review_order": 58,
+        "test_row": 322,
+        "story_id": "09a4cd108a1c7295ff4f2963e69915bc7dd8d90e6fc7fd8effebc120ea38cb05"
+      },
+      {
+        "review_order": 59,
+        "test_row": 317,
+        "story_id": "3fa41b437adb97d1884b8f40e4b840f9ece9e53a7d78e9e47bfce1392ffd073a"
+      },
+      {
+        "review_order": 60,
+        "test_row": 186,
+        "story_id": "0f439505360438d2c0f0ea57c4239832f383aefb3b7e25347a7248c1b28f1f5f"
+      }
+    ]
+  }
+}

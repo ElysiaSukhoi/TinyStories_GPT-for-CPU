@@ -11,8 +11,10 @@ from checkpoints import sha256
 from train_pretrain import PROJECT, write_atomic
 
 
-def package(pretrain, sft, tokenizer, output):
+def package(pretrain, sft, tokenizer, output, summary=None):
     files = {"pretrain.pt": pretrain, "sft.pt": sft, "tokenizer.json": tokenizer}
+    if summary is not None:
+        files["training_summary.json"] = summary
     if output.resolve() in {path.resolve() for path in files.values()}:
         raise ValueError("Choose an archive output different from all input files.")
     digests = {name: sha256(path) for name, path in files.items()}
@@ -46,8 +48,9 @@ def main():
     parser.add_argument("--sft", type=Path, default=PROJECT / "runs" / "sft" / "best.pt")
     parser.add_argument("--tokenizer", type=Path, default=PROJECT / "data" / "prepared" / "tokenizer.json")
     parser.add_argument("--output", type=Path, default=PROJECT / "dist" / "tiny-gpt-cpu-weights.zip")
+    parser.add_argument("--summary", type=Path, help="Include a training and data summary JSON file.")
     args = parser.parse_args()
-    package(args.pretrain, args.sft, args.tokenizer, args.output)
+    package(args.pretrain, args.sft, args.tokenizer, args.output, args.summary)
 
 
 if __name__ == "__main__":

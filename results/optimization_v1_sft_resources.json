@@ -1,0 +1,7 @@
+{
+  "measurement": "SFT replay with original settings, all recorded losses and selected model tensors identical",
+  "peak_memory_mib": 660.66796875,
+  "baseline_checkpoint_sha256": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+  "replay_checkpoint_sha256": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+  "replay_seconds": 115.44481319999977
+}

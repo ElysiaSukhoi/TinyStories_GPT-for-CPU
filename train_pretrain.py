@@ -311,6 +311,8 @@ def main():
     parser.add_argument("--data-dir", type=Path, default=PROJECT / "data" / "prepared")
     parser.add_argument("--run-dir", type=Path, default=PROJECT / "runs" / "pretrain")
     parser.add_argument("--threads", type=int, default=4)
+    parser.add_argument("--n-layers", type=int, default=4, help="Number of Transformer blocks.")
+    parser.add_argument("--d-model", type=int, default=192, help="Hidden width with four attention heads.")
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--grad-accum", type=int, default=2)
     parser.add_argument("--lr", type=float, default=3e-4)
@@ -327,13 +329,18 @@ def main():
         parser.error("Steps, threads, batch size, accumulation, and evaluation counts must be positive.")
     if not math.isfinite(args.lr) or args.lr <= 0 or (args.benchmark and args.resume):
         parser.error("Use a positive learning rate and choose either benchmark or resume.")
+    if args.n_layers < 1 or args.d_model < 1 or args.d_model % 4:
+        parser.error("--n-layers must be positive and --d-model must be a positive multiple of 4.")
 
     torch.set_num_threads(args.threads)
     torch.set_num_interop_threads(1)
     torch.manual_seed(args.seed)
     rng = torch.Generator().manual_seed(args.seed + 1)
     manifest = json.loads((args.data_dir / "manifest.json").read_text(encoding="utf-8"))
-    config = GPTConfig(vocab_size=manifest["vocab_size"], context_length=manifest["context_length"])
+    config = GPTConfig(
+        vocab_size=manifest["vocab_size"], context_length=manifest["context_length"],
+        n_layers=args.n_layers, d_model=args.d_model,
+    )
     model = GPT(config)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, betas=(0.9, 0.95), weight_decay=0.1)
     streams = [

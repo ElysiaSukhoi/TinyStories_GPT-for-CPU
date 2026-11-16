@@ -44,7 +44,10 @@ def file_sha256(path):
 
 
 def fetch_shard(cache, split):
-    name, expected_hash = SHARDS[split]
+    return fetch_parquet(cache, *SHARDS[split])
+
+
+def fetch_parquet(cache, name, expected_hash):
     url = f"https://huggingface.co/datasets/{DATASET}/resolve/{REVISION}/data/{name}"
     path = cache / name
     if not path.exists():
