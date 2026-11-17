@@ -1,0 +1,1617 @@
+{
+  "reviewer": "Codex（单一 AI 评阅）",
+  "question_sha256": {
+    "blind": "7b2a375cff4b9af19e4880e95372dadc477a963e83e61e3bc2f557f3419468ec",
+    "goals": "8e30ec2e17314db1b9411b41ef890829fa654251f647c9f6b799883ce31b8f11"
+  },
+  "rubric": {
+    "continuity": "承接前文的关键人物、物件、动作或情境，且没有显著矛盾。开放背景可以引出新情节。",
+    "no_repetition": "句内、句间没有明显机械复述，并提供可区分的信息。",
+    "goal_progress": "按题目验收标准，输出必须有具体可辨识的目标推进。",
+    "respects_constraint": "输出没有明确违反题目限制。省略限制只有在输出已满足具体推进要求时才可能计为通过。"
+  },
+  "blind": [
+    {
+      "id": 1,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 2,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 3,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 4,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 5,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 6,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 7,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 8,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": false
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        }
+      }
+    },
+    {
+      "id": 9,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 10,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 11,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 12,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 13,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 14,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 15,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 16,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": false
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": false
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        }
+      }
+    },
+    {
+      "id": 17,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 18,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": true
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": false
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": true
+        }
+      }
+    },
+    {
+      "id": 19,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 20,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": false
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": true
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": false
+        }
+      }
+    },
+    {
+      "id": 21,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 22,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 23,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": true
+        }
+      }
+    },
+    {
+      "id": 24,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 25,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 26,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 27,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 28,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 29,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 30,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 31,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 32,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 33,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 34,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 35,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 36,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 37,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 38,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 39,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 40,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 41,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 42,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 43,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 44,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 45,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 46,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": true
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": true
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": false
+        }
+      }
+    },
+    {
+      "id": 47,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 48,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 49,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 50,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 51,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 52,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 53,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 54,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 55,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 56,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": false,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 57,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 58,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 59,
+      "scores": {
+        "X": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": false,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    },
+    {
+      "id": 60,
+      "scores": {
+        "X": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Y": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        },
+        "Z": {
+          "continuity": true,
+          "no_repetition": true,
+          "goal_progress": null
+        }
+      }
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-01",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去玩滑梯，未询问失主"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去玩滑梯"
+        }
+      }
+    },
+    {
+      "id": "goal-02",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "打开午餐盒"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "打开午餐盒"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        }
+      }
+    },
+    {
+      "id": "goal-03",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只跑到门边"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "玩铃铛，未找线索"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去描述红球"
+        }
+      }
+    },
+    {
+      "id": "goal-04",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "泛泛答应帮忙，未询问"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "泛泛说要帮忙"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        }
+      }
+    },
+    {
+      "id": "goal-05",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去玩球，未明确跨过门"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去看狗"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去看人，未明确跨过门"
+        }
+      }
+    },
+    {
+      "id": "goal-06",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "未询问或确认失主"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "在确认前把围巾放进口袋"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "询问能否帮忙，未把询问和围巾失主联系起来"
+        }
+      }
+    },
+    {
+      "id": "goal-07",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "想玩车，未找失主"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "小心不碰火车，未找失主"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "在走廊看别的物品"
+        }
+      }
+    },
+    {
+      "id": "goal-08",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "想咬苹果，未找回掉落的苹果"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "取了篮子，未找回掉落的苹果"
+        }
+      }
+    },
+    {
+      "id": "goal-09",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "改做蛋糕"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "放下蜡笔后出去玩"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "开始画画，未说明画在卡片上或用了蜡笔"
+        }
+      }
+    },
+    {
+      "id": "goal-10",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "反复说拿出去，未取碗或给水"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "抱小狗出去，未给水"
+        }
+      }
+    },
+    {
+      "id": "goal-11",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "把车轮放进盒子，未修理"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "收起车轮就出去玩"
+        }
+      }
+    },
+    {
+      "id": "goal-12",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只说想搭，随后改做蛋糕"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "拿了留给弟弟的红积木，未写用蓝积木搭塔"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "开始搭建，未交代蓝积木或塔"
+        }
+      }
+    },
+    {
+      "id": "goal-13",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "想别的玩具，只说思考"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "跑去厨房，未收书"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "决定休息，未收书"
+        }
+      }
+    },
+    {
+      "id": "goal-14",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "未通知爸爸或处理画"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "字符循环"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "想帮妈妈，未通知爸爸"
+        }
+      }
+    },
+    {
+      "id": "goal-15",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "说可以先玩，未等候也未直接滑下"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "跑到滑梯处，未交代等候或轮次"
+        }
+      }
+    },
+    {
+      "id": "goal-16",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "去公园看鸟，未拍照"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "去花园散步，未取相机"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "抓鸟近看，未拍照"
+        }
+      }
+    },
+    {
+      "id": "goal-17",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写高兴，未向管理员请求"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "说小心，未向管理员请求"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去帮助孩子"
+        }
+      }
+    },
+    {
+      "id": "goal-18",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "把船放进水里，反转前情"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "已把船放进篮子但未交代找爸爸或从池里取船的经过，且重置位置"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "转去看红球"
+        }
+      }
+    },
+    {
+      "id": "goal-19",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "穿裙子出去玩"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "只写兴奋"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "带了礼物但去玩，未朝见朋友推进"
+        }
+      }
+    },
+    {
+      "id": "goal-20",
+      "scores": {
+        "X": {
+          "goal_progress": false,
+          "respects_constraint": true,
+          "reason": "问妈妈后转向蛋糕，未查看面包"
+        },
+        "Y": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "自己打开烤箱"
+        },
+        "Z": {
+          "goal_progress": false,
+          "respects_constraint": false,
+          "reason": "自己打开烤箱"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "evaluation": {
+    "test_examples": 400,
+    "prompt_template": "Continue the story in exactly two sentences.\nOpening: {opening}\nContinuation:\n",
+    "decoding": "greedy",
+    "context_length": 128,
+    "max_new_tokens": 64,
+    "eos_id": 1
+  },
+  "threads": 4,
+  "batch_size": 16,
+  "test_sha256": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d",
+  "goals_sha256": "fe7d730a5f381da0661e1b052be967b06ae462381888246fc1832572dd3f5911",
+  "models": {
+    "v1": {
+      "response_cross_entropy": 2.5905218352244828,
+      "response_perplexity": 13.336729362796763,
+      "response_tokens_scored": 10924,
+      "two_sentences": 396,
+      "two_sentence_rate": 0.99,
+      "eos_stops": 399,
+      "eos_rate": 0.9975,
+      "two_sentences_and_eos": 396,
+      "two_sentences_and_eos_rate": 0.99,
+      "generation_seconds": 9.196619700000156,
+      "exact_repeated_sentence_pairs": 17,
+      "parameters": 2590848,
+      "checkpoint_step": 500,
+      "checkpoint_sha256": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+      "generation_tokens": 9375,
+      "generation_tokens_per_second": 1019.3962897041226
+    },
+    "v2": {
+      "response_cross_entropy": 2.0876521554699488,
+      "response_perplexity": 8.06595530656924,
+      "response_tokens_scored": 10924,
+      "two_sentences": 399,
+      "two_sentence_rate": 0.9975,
+      "eos_stops": 400,
+      "eos_rate": 1.0,
+      "two_sentences_and_eos": 399,
+      "two_sentences_and_eos_rate": 0.9975,
+      "generation_seconds": 20.052481400000033,
+      "exact_repeated_sentence_pairs": 9,
+      "parameters": 4240896,
+      "checkpoint_step": 500,
+      "checkpoint_sha256": "1a36a5decdafc69b4a8b89df594db52c660bcf9a010813b23d9da549fd1c6f9a",
+      "generation_tokens": 9581,
+      "generation_tokens_per_second": 477.79622924871455
+    },
+    "v3": {
+      "response_cross_entropy": 2.0433010525731365,
+      "response_perplexity": 7.716038252393628,
+      "response_tokens_scored": 10924,
+      "two_sentences": 400,
+      "two_sentence_rate": 1.0,
+      "eos_stops": 400,
+      "eos_rate": 1.0,
+      "two_sentences_and_eos": 400,
+      "two_sentences_and_eos_rate": 1.0,
+      "generation_seconds": 29.866895999999542,
+      "exact_repeated_sentence_pairs": 12,
+      "parameters": 5820416,
+      "checkpoint_step": 500,
+      "checkpoint_sha256": "2d9a113e8067300d288a70ebd49584f328d6c84d0756627412d4de198a2715f8",
+      "generation_tokens": 9656,
+      "generation_tokens_per_second": 323.30108893807204
+    }
+  }
+}

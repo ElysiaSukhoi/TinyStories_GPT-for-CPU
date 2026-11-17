@@ -1,0 +1,89 @@
+{
+  "packages": {
+    "v1": {
+      "filename": "tiny-gpt-cpu-weights.zip",
+      "bytes": 22246280,
+      "sha256": "1bb03efde2fcf42e4f3d0e85e0925b8a7bc88bc13869b9b489784b30a76bea33",
+      "member_sha256": {
+        "pretrain.pt": "467cb96fd962753605e733321c4a6ff7538cdfddd3fa616f1b6050a0ac96b963",
+        "sft.pt": "6f0c5ec66d0e4c75a92c1d7750a44803c23086165d2061503a407014e5096241",
+        "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198"
+      }
+    },
+    "v2": {
+      "filename": "tiny-gpt-cpu-v2-b-weights.zip",
+      "bytes": 35498512,
+      "sha256": "b064e52432fb5a6b20ae9491c2865d80b992b69494d5acdc6daec9815d8d5a2c",
+      "member_sha256": {
+        "pretrain.pt": "e09018628b6623a8e8a0d58b95bbef8ec5112ccbdb85c8d66c4d552e55b4f57e",
+        "sft.pt": "1a36a5decdafc69b4a8b89df594db52c660bcf9a010813b23d9da549fd1c6f9a",
+        "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "training_summary.json": "93e94c35cbd0d4b143e6bc199ddc4abf191e48f160535f8303734276c7f64316"
+      }
+    },
+    "v2_a": {
+      "filename": "tiny-gpt-cpu-v2-a-weights.zip",
+      "bytes": 22254372,
+      "sha256": "8164130aa6f8c4bd1c47062a55a93314a6e6ba599e795d307300eee122209a4e",
+      "member_sha256": {
+        "pretrain.pt": "8b6024ac6643d18df07b6264b35a1f91ff9ddec701948a1092d4584ffdcc9893",
+        "sft.pt": "cb505bbe62420c6320d7a3fc57d2db0a894ffb270d1df51c3163e1569ec9f8b6",
+        "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "training_summary.json": "cbe97eb18db6ef29327eef10f8ac6847e368734bb8ea4ea36c8c2b83af9a8883"
+      }
+    },
+    "v3": {
+      "filename": "tiny-gpt-cpu-v3-weights.zip",
+      "bytes": 47238575,
+      "sha256": "465e4016a4f837eb0f174eeeb552d594a39a69021c8890a7b88217900da96fbe",
+      "member_sha256": {
+        "pretrain.pt": "10acfedd6d19f78735839b64f65d6e6056a2f4d3390c7d49296665d0e1bafd85",
+        "sft.pt": "2d9a113e8067300d288a70ebd49584f328d6c84d0756627412d4de198a2715f8",
+        "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+        "training_summary.json": "f5f0c3675453f31a450311524dfb2bb1a07a282de6af38d8f37dd8c5e3d15631"
+      }
+    }
+  },
+  "paper_boat_sft": {
+    "v1": {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She wanted to make a big boat. She wanted to make the boat out of the boat.",
+      "new_tokens": 21,
+      "generation_seconds": 0.05028200000015204,
+      "tokens_per_second": 417.64448510275054,
+      "stop_reason": "eos"
+    },
+    "v2": {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She was very happy and wanted to show it to her friends. Mia was very happy and excited.",
+      "new_tokens": 22,
+      "generation_seconds": 0.06839439999930619,
+      "tokens_per_second": 321.6637619486855,
+      "stop_reason": "eos"
+    },
+    "v3": {
+      "model": "sft",
+      "checkpoint_step": 500,
+      "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+      "continuation": "She looked at the boat and saw a big boat. She wanted to go inside and see what was inside.",
+      "new_tokens": 24,
+      "generation_seconds": 0.1073962999998912,
+      "tokens_per_second": 223.47138588595988,
+      "stop_reason": "eos"
+    }
+  },
+  "v3_packaged_pretrain": {
+    "model": "pretrain",
+    "checkpoint_step": 12000,
+    "prompt": "Mia found a paper boat beside the pond. She picked it up and looked for its owner.",
+    "continuation": " She was so excited to see what it was. She opened the box and found a small box. Inside, there was a big, shiny thing. It was a shiny thing that she had never seen before. Mia was so excited to see what was inside. She opened the box and found a shiny thing. It was",
+    "new_tokens": 64,
+    "generation_seconds": 0.2312781000000541,
+    "tokens_per_second": 276.7231311567547,
+    "stop_reason": "max_new_tokens"
+  }
+}

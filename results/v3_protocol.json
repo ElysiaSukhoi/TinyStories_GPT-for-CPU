@@ -1,0 +1,83 @@
+{
+  "v2_b": {
+    "model_config": {
+      "vocab_size": 4096,
+      "context_length": 128,
+      "n_layers": 4,
+      "n_heads": 4,
+      "d_model": 256
+    },
+    "weight_sha256": {
+      "pretrain": "e09018628b6623a8e8a0d58b95bbef8ec5112ccbdb85c8d66c4d552e55b4f57e",
+      "sft": "1a36a5decdafc69b4a8b89df594db52c660bcf9a010813b23d9da549fd1c6f9a"
+    }
+  },
+  "v3": {
+    "model_config": {
+      "vocab_size": 4096,
+      "context_length": 128,
+      "n_layers": 6,
+      "n_heads": 4,
+      "d_model": 256
+    },
+    "parameters": 5820416
+  },
+  "data_sha256": {
+    "manifest.json": "f1865d5172c4a3b8b861b9e3af860709ea1e42667f599ac74e5d62943302ec50",
+    "tokenizer.json": "4cdc453735f9b95d3a393598df69450279bd07d2111e3969a3a53f9275d06198",
+    "pretrain_train.bin": "62413de092170ed9d292e8a54792a17887fd95d7f511a87298b58cc7150baadd",
+    "pretrain_val.bin": "d4f9da7026cf1b13887cb9cf33e4a9f452fa074ea4f4b41268ab2c6432b23d5e",
+    "pretrain_val.jsonl": "0988f9c60137d3beaa85914e283c612b6565dce901f2c22f1fbbb2e6b439514e",
+    "sft_train.jsonl": "4a0be0bf5a38583735189e33f79983b4b94ed990eb601ba48947fb056dc66e01",
+    "sft_val.jsonl": "a105abaf96327fa638c940806b38f30386f70460288826e32e70efd26c73a81a",
+    "sft_test.jsonl": "f3d87b279fac350750c1768ce859b4b08e9ba3023dc25df8dc7906ad3c5bb17d"
+  },
+  "pretraining": {
+    "seed": 42,
+    "threads": 4,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "lr": 0.0003,
+    "val_batches": 32,
+    "pilot_steps": 250,
+    "steps": 12000,
+    "tokens": 24576000,
+    "eval_every": 500
+  },
+  "sft": {
+    "seed": 42,
+    "threads": 4,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "epochs": 3
+  },
+  "evaluation": {
+    "test_examples": 400,
+    "prompt_template": "Continue the story in exactly two sentences.\nOpening: {opening}\nContinuation:\n",
+    "decoding": "greedy",
+    "context_length": 128,
+    "max_new_tokens": 64,
+    "eos_id": 1
+  },
+  "review": {
+    "baseline_file": "results/optimization_baseline_v1.json",
+    "baseline_sha256": "bd0fa2ce4f13c71e528b0e944803d350bc2e4b0ca5b40842bdd8d5cc502ccf5d",
+    "blind_cases": 60,
+    "explicit_goal_set": {
+      "file": "results/v3_goal_cases.jsonl",
+      "sha256": "fe7d730a5f381da0661e1b052be967b06ae462381888246fc1832572dd3f5911",
+      "examples": 20,
+      "categories": {
+        "lost_property": 7,
+        "task_completion": 7,
+        "explicit_constraint": 6
+      },
+      "prompt_token_range": [
+        55,
+        63
+      ],
+      "model_order_seed": 44,
+      "scoring": "Pass when the continuation makes concrete progress toward the stated goal and respects the opening constraint. Record both judgments and one reason separately."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex\uff08\u5355\u4e00 AI \u8bc4\u9605\uff09",
+  "question_sha256": {
+    "blind": "7b2a375cff4b9af19e4880e95372dadc477a963e83e61e3bc2f557f3419468ec",
+    "goals": "8e30ec2e17314db1b9411b41ef890829fa654251f647c9f6b799883ce31b8f11"
+  },
+  "blind_questions": 60,
+  "goal_questions": 20,
+  "models": {
+    "v1": {
+      "blind": {
+        "total": 60,
+        "continuity": 29,
+        "no_repetition": 37,
+        "goals_applicable": 6,
+        "goal_progress": 0
+      },
+      "goals": {
+        "total": 20,
+        "goal_progress": 0,
+        "respects_constraint": 20,
+        "both_pass": 0
+      },
+      "goals_by_category": {
+        "lost_property": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "task_completion": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "explicit_constraint": {
+          "total": 6,
+          "both_pass": 0
+        }
+      }
+    },
+    "v2": {
+      "blind": {
+        "total": 60,
+        "continuity": 45,
+        "no_repetition": 47,
+        "goals_applicable": 6,
+        "goal_progress": 2
+      },
+      "goals": {
+        "total": 20,
+        "goal_progress": 0,
+        "respects_constraint": 18,
+        "both_pass": 0
+      },
+      "goals_by_category": {
+        "lost_property": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "task_completion": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "explicit_constraint": {
+          "total": 6,
+          "both_pass": 0
+        }
+      }
+    },
+    "v3": {
+      "blind": {
+        "total": 60,
+        "continuity": 47,
+        "no_repetition": 50,
+        "goals_applicable": 6,
+        "goal_progress": 4
+      },
+      "goals": {
+        "total": 20,
+        "goal_progress": 0,
+        "respects_constraint": 16,
+        "both_pass": 0
+      },
+      "goals_by_category": {
+        "lost_property": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "task_completion": {
+          "total": 7,
+          "both_pass": 0
+        },
+        "explicit_constraint": {
+          "total": 6,
+          "both_pass": 0
+        }
+      }
+    }
+  }
+}

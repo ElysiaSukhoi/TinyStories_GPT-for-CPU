@@ -278,8 +278,79 @@ $opening = 'Mia found a paper boat beside the pond. She picked it up and looked 
 & .\.conda\python.exe generate.py --model sft --checkpoint runs/optimization/b/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --prompt $opening
 ```
 
-第二轮权重包 `dist/tiny-gpt-cpu-v2-weights.zip` 已通过成员 SHA-256 检查，解压后的预训练与微调权重均完成 CPU 推理。压缩包包含两套权重、分词器、校验清单和数据及训练配置摘要。可用以下命令重新打包。 [训练配置摘要](results/optimization_release_summary.json)
+第二版 B 权重包 `dist/tiny-gpt-cpu-v2-b-weights.zip` 已通过成员 SHA-256 检查，解压后的预训练与微调权重均完成 CPU 推理。压缩包包含两套权重、分词器、校验清单和数据及训练配置摘要。可用以下命令重新打包。 [训练配置摘要](results/optimization_release_summary.json)
 
 ```powershell
-& .\.conda\python.exe -m scripts.package_weights --pretrain runs/optimization/b/best.pt --sft runs/optimization/b/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --summary results/optimization_release_summary.json --output dist/tiny-gpt-cpu-v2-weights.zip
+& .\.conda\python.exe -m scripts.package_weights --pretrain runs/optimization/b/best.pt --sft runs/optimization/b/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --summary results/optimization_release_summary.json --output dist/tiny-gpt-cpu-v2-b-weights.zip
+```
+
+## 第三轮固定配置与目标推进题
+
+第三版用 6 层 × 256、4 个注意力头、128 token 上下文，共 5,820,416 个参数。训练使用与第二版 B 相同的扩充语料、分词器和累计 token 预算。[锁定配置](results/v3_protocol.json) 记录了这些设置和可复核的 SHA-256。
+
+正式测试沿用 400 道冻结测试题和其中的 60 道盲评题，另加 [20 道目标推进题](results/v3_goal_cases.jsonl)。找失主 7 道、完成任务 7 道、明确限制 6 道。新题包含两句英文开头及供评分者使用的目标、限制和判定示例。推理只输入英文开头，沿用标准续写模板。评分时逐项记录是否采取了具体行动或提供有效线索、是否遵守开头限制。两项均通过才计为该题通过，汇总按通过数除以 20。两句完成和 EOS 停止另行记录。纸船题单独演示。
+
+核验冻结的配置、数据、权重指纹、题目长度和题目开头去重可运行以下命令。
+
+```powershell
+& .\.conda\python.exe -m scripts.freeze_baseline
+& .\.conda\python.exe -m scripts.freeze_v3_protocol
+```
+
+## 第三轮预训练与监督微调
+
+从仓库根目录运行。预训练从随机权重开始，先跑 250 步，再由本轮的检查点续训到 12,000 步。每次更新处理 2,048 个 token，共 24,576,000 个 token。训练日志按固定验证窗口选取最佳权重，随后用完整预训练验证缓存复核。
+
+```powershell
+$run = 'runs/optimization/v3'
+$trainArgs = @('--data-dir','data/prepared-v2','--run-dir',$run,'--n-layers','6','--d-model','256',
+               '--threads','4','--batch-size','8','--grad-accum','2','--seed','42','--lr','0.0003',
+               '--val-batches','32','--eval-every','500')
+& .\.conda\python.exe -u train_pretrain.py @trainArgs --steps 250
+& .\.conda\python.exe -u train_pretrain.py @trainArgs --steps 12000 --resume
+& .\.conda\python.exe -m scripts.verify_v3_training --pretrain-only
+```
+
+用第三版最佳预训练权重，在同一批 8,000 条训练样本上做三轮 SFT。沿用种子、学习率、批大小与答案损失掩码。每轮用固定的 400 条 SFT 验证样本选择权重。
+
+```powershell
+& .\.conda\python.exe -u train_sft.py --data-dir data/prepared-v2 --pretrained runs/optimization/v3/best.pt --run-dir runs/optimization/v3/sft --threads 4 --batch-size 16 --seed 42 --epochs 3 --lr 0.0001
+& .\.conda\python.exe -m scripts.verify_v3_training
+```
+
+核验命令检查数据指纹、训练设置和最佳权重，重新计算 SFT 验证分数，并汇总到 `results/v3_training.json`。
+
+本机预训练两段合计 81.8 分钟，峰值工作集为 677 MiB。第 12,000 步在固定验证窗口上表现最佳，完整验证缓存共计分 323,456 个目标 token，交叉熵 2.3534、困惑度 10.52。SFT 三轮合计 7.9 分钟，峰值工作集为 806 MiB。第 1 轮的验证答案交叉熵最低，为 2.0413，重新载入后得到相同分数。最终使用 `runs/optimization/v3/best.pt` 和 `runs/optimization/v3/sft/best.pt`。 [本机训练与验证明细](results/v3_training.json)
+
+## 三版本最终对比
+
+| 版本 | 参数量 | 测试答案 CE | 两句完成 | EOS 停止 | 整句重复 | 盲评情节承接 | 盲评无明显重复 | 新增目标题通过 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 第一版 | 2,590,848 | 2.5905 | 396/400 | 399/400 | 17/400 | 29/60 | 37/60 | 0/20 |
+| 第二版 B | 4,240,896 | 2.0877 | 399/400 | 400/400 | 9/400 | 45/60 | 47/60 | 0/20 |
+| 第三版 | 5,820,416 | 2.0433 | 400/400 | 400/400 | 12/400 | 47/60 | 50/60 | 0/20 |
+
+三版沿用同一套 400 题、分词器和贪心生成参数。60 题由同一个 AI 评阅者 Codex 在版本匿名的条件下重新评分，沿用以前抽取的题号。本轮比分和第二轮盲评分别记录。新增 20 道题按预先写好的规则检查具体目标推进和显式限制，通过需同时满足两项。第三版在纸船题上保留了船，却转去描述另一艘大船。 [自动评估](results/v3_comparison.json) · [盲评汇总](results/v3_review.json) · [80 道题的三版输出和判定](results/v3_review_outputs.jsonl)
+
+复现命令会用三套本地 SFT 检查点生成 400 + 20 道题的逐题输出、匿名题与标签映射。汇总脚本先检查匿名题 SHA-256，再用固定评分汇总。全量输出存放于 `runs/optimization/v3/comparison`。
+
+```powershell
+& .\.conda\python.exe -m scripts.evaluate_v3
+& .\.conda\python.exe -m scripts.summarize_v3_review
+```
+
+### 第三版 Release 权重与推理
+
+第三版 ZIP 包含预训练权重、SFT 权重、分词器、成员 SHA-256 和训练摘要。它已通过 ZIP 完整性和成员校验，解压的两套权重均已在 CPU 上完成推理。三个正式版本及可选 A 组的 ZIP 校验结果与纸船题输出一并记录。 [校验及推理记录](results/v3_release_verification.json) · [训练摘要](results/v3_release_summary.json)
+
+从本地训练产物重新打包，或将 Release 附件放到 `dist` 下后从解压目录运行推理。
+
+```powershell
+# 使用本地训练产物重新打包
+& .\.conda\python.exe -m scripts.package_weights --pretrain runs/optimization/v3/best.pt --sft runs/optimization/v3/sft/best.pt --tokenizer data/prepared-v2/tokenizer.json --summary results/v3_release_summary.json --output dist/tiny-gpt-cpu-v3-weights.zip
+
+# 使用解压后的第三版 SFT 权重推理
+Expand-Archive -LiteralPath .\dist\tiny-gpt-cpu-v3-weights.zip -DestinationPath .\dist\v3
+$opening = 'Mia found a paper boat beside the pond. She picked it up and looked for its owner.'
+& .\.conda\python.exe generate.py --model sft --checkpoint .\dist\v3\sft.pt --tokenizer .\dist\v3\tokenizer.json --prompt $opening
 ```
